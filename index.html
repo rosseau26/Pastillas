@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1020">
+<link rel="manifest" href="manifest.json">
+<title>Mis medicamentos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header>
+    <div>
+      <p class="eyebrow">MI SALUD</p>
+      <h1>Mis medicamentos</h1>
+      <p id="today"></p>
+    </div>
+    <button id="notifyBtn" class="icon-btn" title="Activar notificaciones">🔔</button>
+  </header>
+
+  <section class="next-card">
+    <div>
+      <span>PRÓXIMA TOMA</span>
+      <h2 id="nextName">Sin medicamentos</h2>
+      <p id="nextTime">Agrega tu primer recordatorio</p>
+    </div>
+    <div class="pill-icon">💊</div>
+  </section>
+
+  <section class="section-head">
+    <h2>Hoy</h2>
+    <button id="addBtn" class="add-btn">＋ Agregar</button>
+  </section>
+  <section id="todayList" class="list"></section>
+
+  <section class="section-head history-head">
+    <h2>Medicamentos</h2>
+  </section>
+  <section id="medList" class="list"></section>
+</main>
+
+<div id="modal" class="modal hidden">
+  <div class="sheet">
+    <div class="sheet-head">
+      <h2 id="modalTitle">Nuevo medicamento</h2>
+      <button id="closeBtn" class="close">×</button>
+    </div>
+    <label>Nombre
+      <input id="name" placeholder="Ej. Medicamento" autocomplete="off">
+    </label>
+    <label>Dosis
+      <input id="dose" placeholder="Ej. 1 tableta" autocomplete="off">
+    </label>
+    <label>Hora
+      <input id="time" type="time">
+    </label>
+    <label>Frecuencia
+      <select id="freq">
+        <option value="daily">Todos los días</option>
+        <option value="weekdays">Lunes a viernes</option>
+        <option value="weekends">Sábado y domingo</option>
+      </select>
+    </label>
+    <button id="saveBtn" class="primary">Guardar recordatorio</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
